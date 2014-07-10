@@ -118,7 +118,14 @@ void keyPressed()
       player.trigger(); 
       }
     //racquet collision
-    if(xpos>racX-47 && xpos<racX+10 && ypos>565 && ypos<600 && score!=10)
+    if(xpos>racX-47 && xpos<racX-19 && ypos>565 && ypos<600 && score!=10)
+    {
+      xspeed*=1;
+      yspeed*=-1;
+      score++;
+      player.trigger();
+    }
+    if(xpos>racX-19 && xpos<racX+10 && ypos>565 && ypos<600 && score!=10)
     {
       xspeed*=-1;
       yspeed*=-1;
